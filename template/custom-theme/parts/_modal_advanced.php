@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @Created by          : Waris Agung Widodo (ido.alit@gmail.com)
+ * @Date                : 2020-01-02 20:33
+ * @File name           : _modal_advanced.php
+ */
+
+?>
+
+<div class="modal fade" id="adv-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <form class="modal-content" action="index.php" method="get">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><?= __('Advanced Search'); ?></h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-titles"><?= __('Title'); ?></label>
+                            <input type="text" name="title" class="form-control" id="adv-titles" placeholder="<?= __('Enter title'); ?>">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-author"><?= __('Author(s)'); ?></label>
+                            <input type="text" name="author" class="form-control" id="adv-author" placeholder="<?= __('Enter author(s) name'); ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-subject"><?= __('Subject(s)'); ?></label>
+                            <input type="text" name="subject" class="form-control" id="adv-subject" placeholder="<?= __('Enter subject'); ?>">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-isbn"><?= __('ISBN/ISSN'); ?></label>
+                            <input type="text" name="isbn" class="form-control" id="adv-isbn" placeholder="<?= __('Enter ISBN/ISSN'); ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-publishyear"><?= __('Publish Year'); ?></label>
+                            <input type="text" name="publishyear" class="form-control" id="adv-publishyear" placeholder="<?= __('Enter publish year'); ?>">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-location"><?= __('Location'); ?></label>
+                            <select id="adv-location" name="location" class="form-control"> <?= $location_list; ?></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-gmd"><?= __('GMD'); ?></label>
+                            <select id="adv-gmd" name="gmd" class="form-control"><?= $gmd_list; ?></select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label for="adv-coll-type"><?= __('Collection Type'); ?></label>
+                            <select name="colltype" class="form-control" id="adv-coll-type"><?= $colltype_list; ?></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" name="search" value="search" class="btn btn-danger"><?= __('Find Collection'); ?></button>
+            </div>
+        </form>
+    </div>
+</div>
